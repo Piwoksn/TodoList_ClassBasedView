@@ -11,9 +11,29 @@
 </form>
 <a href="{% url 'newtask' %}">+</a>
 {% for task in tasks %}
+
+{% if task.completed %}
+
+<div class="completed"></div>
 <div class="items border-bottom">
-    <a href="{% url 'edit' task.id %}">{{ task }}</a> <a href="{% url 'delete' task.id %}">delete</a>
+    <p>
+        <s>
+        <a href="{% url 'edit' task.id %}">{{ task }}</a></s> <a href="{% url 'delete' task.id %}">delete</a>
+        
+    </p>
 </div>
+{% else %}
+<div class="not-completed"></div>
+<div class="items border-bottom">
+    <p>
+      
+        <a href="{% url 'edit' task.id %}">{{ task }}</a> <a href="{% url 'delete' task.id %}">delete</a>
+      
+    </p>
+</div>
+
+{% endif %}
+    
     {% empty %}
     <p>No found task</p>
     {% endfor %}
