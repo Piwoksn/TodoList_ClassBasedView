@@ -1,6 +1,8 @@
 {% extends "app/wrapper.html" %}
 {% block content %}
-<form action="" method="POST">
+<h1>Sign Up</h1>
+<hr>
+<form  class="newtask" action="" method="POST">
     {% csrf_token %}
     <div class="">
         <label class="form-label" for="username">{{ form.username.label }}</label>
@@ -19,7 +21,7 @@
     {{ form.password2 }}
 </div>
 
-    <input type="submit" value="Register">
+    <input class="btn btn-lg btn-warning my-3" type="submit" value="Register">
 </form>
 <p> already have an account? 
 <a href="{% url 'login' %}">Login</a>

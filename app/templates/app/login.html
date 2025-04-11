@@ -4,10 +4,10 @@
     Login
 </h1>
 <hr>
-<form action="" method="POST">
+<form class="newtask" action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input class="btn btn-success" type="submit" value="Login">
+    <input class="btn btn-lg btn-success" type="submit" value="Login">
 </form>
 <p> Don't have have an account? 
     <a href="{% url 'signup' %}">Signup</a>
