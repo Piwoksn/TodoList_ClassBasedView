@@ -8,5 +8,6 @@ urlpatterns = [
     path("delete/<int:pk>/", views.DeleteTask.as_view(), name="delete"),
     path("newtask/", views.CreateTask.as_view(), name="newtask"),
     path("login/", views.LoginUser.as_view(), name="login"),
+    path("signup/", views.SignupUser.as_view(), name="signup"),
     path("logout/", LogoutView.as_view(next_page= "login"), name="logout"),
 ]

@@ -4,7 +4,8 @@
 <a href="{% url 'login' %}">Login</a>
 <a href="">Sign Up</a>
 {% endif %}
-<h1>ToDo List</h1>
+<h1>Hello {{ request.user|title }}</h1>
+<p>You have {{ count }} incomplete task{{ count|pluralize:"s"}}</p>
 <a href="{% url 'newtask' %}">New Task</a>
 <ul>
     {% for task in tasks %}
