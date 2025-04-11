@@ -1,11 +1,20 @@
 # Todo List
 
-Classed based todo list with user authentication, fully built on django
+A simple yet functional Todo List app with user authentication, built entirely with Django.  
+This project uses **Class-Based Views (CBVs)** to keep things organized and scalable.
 
 ## requirements
 
 - download and install python 3
 - install django ("pip install django" or "pip3 install django" depending on your operating system)
+
+## stack
+
+- HTML
+- CSS
+- Bootstrap
+- Python
+- DJango
 
 ## open for UI improvement
 
