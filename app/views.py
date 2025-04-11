@@ -5,9 +5,18 @@ from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
-
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.views import LoginView
 
 # Create your views here.
+class LoginUser(LoginView):
+    template_name = "app/login.html"
+    fields = "__all__"
+    redirect_authenticated_user = True
+    
+    def get_success_url(self):
+        return reverse_lazy("home")
+
 class HomeView(ListView):
     model = Task
     context_object_name = "tasks"
@@ -36,4 +45,3 @@ class DeleteTask(DeleteView):
     success_url = reverse_lazy("home")
 
 
-class NewUser()
