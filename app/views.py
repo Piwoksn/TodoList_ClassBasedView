@@ -42,6 +42,12 @@ class HomeView(LoginRequiredMixin, ListView):
         context =  super().get_context_data(**kwargs)
         context['tasks'] = context['tasks'].filter(user = self.request.user)
         context['count'] = context['tasks'].filter(completed = False).count() 
+        # search box
+        search_item = self.request.GET.get("search") or ''
+        if search_item:
+            context["tasks"] = context["tasks"].filter(title__startswith = search_item)
+
+            context["search"] = search_item
         return context
 
 class TaskDetail(LoginRequiredMixin, DetailView):
