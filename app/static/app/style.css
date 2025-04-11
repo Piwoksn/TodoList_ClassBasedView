@@ -26,5 +26,5 @@ textarea,
 button {
   padding: 8px;
   margin: 8px;
-  max-width: 50%;
+  width: 100%;
 }

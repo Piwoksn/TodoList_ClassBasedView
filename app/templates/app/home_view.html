@@ -18,7 +18,9 @@
 <div class="items border-bottom">
     <p>
         <s>
-        <a href="{% url 'edit' task.id %}">{{ task }}</a></s> <a href="{% url 'delete' task.id %}">delete</a>
+        <a href="{% url 'edit' task.id %}">{{ task }}</a>
+    </s>
+    <a class="btn btn-sm btn-outline-danger" href="{% url 'delete' task.id %}">X</a>
         
     </p>
 </div>

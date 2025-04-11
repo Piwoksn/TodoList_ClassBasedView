@@ -1,9 +1,13 @@
 {% extends "app/wrapper.html" %}
 {% block content %}
-<a href="{% url 'home' %}">back</a>
+<h1>
+    New item
+</h1>
+<hr>
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    <input type="submit" value="Add Task">
+    <a class="btn btn-secondary" href="{% url 'home' %}">back</a>
+    <input class="btn btn-warning" type="submit" value="Add Task">
 </form>
 {% endblock %}

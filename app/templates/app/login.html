@@ -1,5 +1,9 @@
 {% extends "app/wrapper.html" %}
 {% block content %}
+<h1>
+    Login
+</h1>
+<hr>
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
