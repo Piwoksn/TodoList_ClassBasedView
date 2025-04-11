@@ -22,4 +22,18 @@ class TaskDetail(DetailView):
 class CreateTask(CreateView):
     model = Task
     fields = "__all__"
-    success_url = reverse_lazy("/")
+    template_name = "app/newtask.html"
+    success_url = reverse_lazy("home")
+
+class EditTask(UpdateView):
+    model = Task
+    fields = "__all__"
+    template_name = "app/newtask.html"
+    success_url = reverse_lazy("home")
+
+class DeleteTask(DeleteView):
+    model = Task
+    success_url = reverse_lazy("home")
+
+
+class NewUser()

@@ -1,7 +1,8 @@
 <h1>ToDo List</h1>
+<a href="{% url 'newtask' %}">New Task</a>
 <ul>
     {% for task in tasks %}
-    <a href="{% url 'detail' task.id %}"><li>{{ task }}</li></a>
+    <li><a href="{% url 'edit' task.id %}">{{ task }}</a> <a href="{% url 'delete' task.id %}">delete</a></li>
     {% empty %}
     <p>No found task</p>
     {% endfor %}
