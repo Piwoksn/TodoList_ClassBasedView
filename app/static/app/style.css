@@ -4,11 +4,10 @@ body {
 
 .completed,
 .not-completed {
-  justify-content: space-between;
-  display: flex;
   width: 15px;
   height: 15px;
   border-radius: 50%;
+  display: flex;
 }
 .completed {
   background-color: green;
@@ -18,7 +17,11 @@ body {
 }
 
 .items {
-  display: flex;
+  float: left;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 input,
@@ -43,21 +46,33 @@ textarea {
   border: none;
 }
 .new {
+  clear: both;
   font-size: 30px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   padding: 0;
-  background-color: red;
+  background-color: orange;
   margin: auto;
+  margin-top: 20px;
 }
 
 .new p a {
   color: white;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 
 .new:hover {
   background-color: green;
+}
+.items .delete {
+  float: right;
+}
+
+.task-item {
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
 }

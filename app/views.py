@@ -62,9 +62,14 @@ class CreateTask(LoginRequiredMixin, CreateView):
 
 class EditTask(LoginRequiredMixin, UpdateView):
     model = Task
-    fields = "__all__"
+    fields = ["title", "content", "completed"]
     template_name = "app/newtask.html"
     success_url = reverse_lazy("home")
+    
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
 
 class DeleteTask(LoginRequiredMixin, DeleteView):
     model = Task

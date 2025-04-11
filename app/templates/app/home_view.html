@@ -3,7 +3,7 @@
 <h1 class="card-title">Hello {{ request.user|title }}</h1>
 <p class="card-text">You have {{ count }} incomplete task{{ count|pluralize:"s"}}</p>
 <hr>
-<form action="" method="GET">
+<form class="my-3" action="" method="GET">
     <div class="search">
         <input class="form-control text" type="text" name="search">
         <input class="btn btn-warning submit" type="submit" value="Search">
@@ -14,22 +14,22 @@
 
 {% if task.completed %}
 
-<div class="completed"></div>
 <div class="items border-bottom">
-    <p>
+    <p> 
+        <i class="bi bi-check-circle-fill text-success"></i>
         <s>
-        <a href="{% url 'edit' task.id %}">{{ task }}</a>
+        <a class="task-item mx-3" href="{% url 'edit' task.id %}">{{ task }}</a>
     </s>
-    <a class="btn btn-sm btn-outline-danger" href="{% url 'delete' task.id %}">X</a>
+    <a class="btn btn-sm btn-outline-danger delete" href="{% url 'delete' task.id %}">X</a>
         
     </p>
 </div>
 {% else %}
-<div class="not-completed"></div>
 <div class="items border-bottom">
     <p>
-      
-        <a href="{% url 'edit' task.id %}">{{ task }}</a> <a href="{% url 'delete' task.id %}">delete</a>
+        <i class="bi bi-circle-fill"></i>
+        <a class="task-item mx-3" href="{% url 'edit' task.id %}">{{ task }}</a> 
+        <a class="btn btn-sm btn-outline-danger delete" href="{% url 'delete' task.id %}">X</a>
       
     </p>
 </div>
@@ -37,9 +37,10 @@
 {% endif %}
     
     {% empty %}
-    <p>No found task</p>
+    <p class="text-center p-3">No found task <br>click the + icon to add new task</p>
+    <hr>
     {% endfor %}
-    <div class="new my-2">
+    <div class="new">
         <p class="text-center">
     <a href="{% url 'newtask' %}">+</a>
 </p>
