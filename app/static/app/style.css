@@ -42,3 +42,22 @@ textarea {
 .search .text {
   border: none;
 }
+.new {
+  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  background-color: red;
+  margin: auto;
+}
+
+.new p a {
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.new:hover {
+  background-color: green;
+}

@@ -9,7 +9,7 @@
         <input class="btn btn-warning submit" type="submit" value="Search">
     </div>
 </form>
-<a href="{% url 'newtask' %}" style="font-size: 30px;">+</a>
+
 {% for task in tasks %}
 
 {% if task.completed %}
@@ -39,5 +39,9 @@
     {% empty %}
     <p>No found task</p>
     {% endfor %}
-
+    <div class="new my-2">
+        <p class="text-center">
+    <a href="{% url 'newtask' %}">+</a>
+</p>
+</div>
 {% endblock %}
