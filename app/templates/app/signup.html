@@ -1,3 +1,5 @@
+{% extends "app/wrapper.html" %}
+{% block content %}
 <form action="" method="POST">
     {% csrf_token %}
     {{ form.as_p }}
@@ -6,3 +8,4 @@
 <p> already have an account? 
 <a href="{% url 'login' %}">Login</a>
 </p>
+{% endblock %}

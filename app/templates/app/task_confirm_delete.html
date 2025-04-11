@@ -1,7 +1,10 @@
-<a href="{% url 'home' %}">back</a>
+{% extends "app/wrapper.html" %}
+{% block content %}
+a href="{% url 'home' %}">back</a>
 <form action="" method="POST">
     {% csrf_token %}
     <p>Are you sure you want to delete <b>{{ task }}</b>?</p>
     <input type="submit" value="Delete">
 
 </form>
+{% endblock %}
