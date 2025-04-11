@@ -5,11 +5,11 @@
 <hr>
 <form action="" method="GET">
     <div class="search">
-        <input class="form-control" type="text" name="search">
-        <input class="btn btn-warning" type="submit" value="Search">
+        <input class="form-control text" type="text" name="search">
+        <input class="btn btn-warning submit" type="submit" value="Search">
     </div>
 </form>
-<a href="{% url 'newtask' %}">+</a>
+<a href="{% url 'newtask' %}" style="font-size: 30px;">+</a>
 {% for task in tasks %}
 
 {% if task.completed %}

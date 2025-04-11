@@ -29,3 +29,16 @@ textarea {
 .newtask {
   padding: 10px;
 }
+.search {
+  width: auto;
+  display: flex;
+  border: 1px solid grey;
+}
+
+.search .submit {
+  width: auto;
+  border-radius: 0px;
+}
+.search .text {
+  border: none;
+}
