@@ -20,7 +20,7 @@
         <s>
         <a class="task-item mx-3" href="{% url 'edit' task.id %}">{{ task }}</a>
     </s>
-    <a class="btn btn-sm btn-outline-danger delete" href="{% url 'delete' task.id %}">X</a>
+    <a class="btn btn-sm btn-outline-danger delete" href="{% url 'delete' task.id %}">&#215;</a>
         
     </p>
 </div>
@@ -29,7 +29,7 @@
     <p>
         <i class="bi bi-circle-fill"></i>
         <a class="task-item mx-3" href="{% url 'edit' task.id %}">{{ task }}</a> 
-        <a class="btn btn-sm btn-outline-danger delete" href="{% url 'delete' task.id %}">X</a>
+        <a class="btn btn-sm btn-outline-danger delete" href="{% url 'delete' task.id %}">&#215;</a>
       
     </p>
 </div>
